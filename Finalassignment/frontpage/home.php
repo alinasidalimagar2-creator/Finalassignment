@@ -499,7 +499,6 @@ unset($_SESSION['flash_success'], $_SESSION['flash_error']);
         <section class="cta">
             <h2>Ready to Start Your Journey?</h2>
             <p>Register your interest today and receive updates about open days, application deadlines, and more.</p>
-            <a href="frontpage/register_interest.php" class="btn btn-success">Register Interest Now</a>
         </section>
     </main>
 
