@@ -5,12 +5,12 @@ include 'auth.php';
 // (Optional) Delete via query param, matching the pattern in staff.php's header code.
 // Note: Your staff.php currently links to delete_staff.php, so this block won't run unless you link to manage_user.php?delete=ID
 if (isset($_GET['delete'])) {
-    $stmt = $pdo->prepare("DELETE FROM `user` WHERE `id` = ?");
+    $stmt = $pdo->prepare("DELETE FROM `users` WHERE `id` = ?");
     $stmt->execute([$_GET['delete']]);
 }
 
 // Fetch all users (from singular table `user`)
-$users = $pdo->query("SELECT `id`, `name`, `email` FROM `user` ORDER BY `name`")->fetchAll(PDO::FETCH_ASSOC);
+$users = $pdo->query("SELECT `id`, `name`, `email` FROM `users` ORDER BY `name`")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
