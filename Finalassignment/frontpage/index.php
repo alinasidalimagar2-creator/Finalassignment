@@ -34,7 +34,6 @@ try {
 <head>
   <meta charset="UTF-8">
   <title>Student Course Hub</title>
-  <!-- External stylesheet only; no CSS inside this file -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
