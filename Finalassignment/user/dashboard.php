@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 /* ---- Load DB config (admin portal) with safe fallbacks ---- */
 $root = realpath(dirname(__DIR__)); // e.g., C:\xampp\htdocs\Finalassignment
 $tried = [];
@@ -122,7 +122,7 @@ try {
 
 <div class="container">
   <div class="dashboard-header">
-    <h2>Welcome, <?= htmlspecialchars($user['name']); ?> 👋</h2>
+    <h2>Welcome, <?= htmlspecialchars($user['name']); ?> </h2>
     <p>Explore available programmes and manage your academic interests.</p>
   </div>
 </div>
