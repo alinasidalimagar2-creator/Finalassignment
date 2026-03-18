@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-/* Direct DB connection (same as you used before) */
+/* Direct DB connection  */
 $host = "localhost";
 $user = "root";
 $pass = "";
@@ -40,8 +40,11 @@ try {
 </head>
 <body>
 
-<nav>
-  <div class="logo">Student Course Hub</div>
+<nav class="main-nav">
+  <div class="logo">
+  <a href="home.php">Home</a>
+</div>
+
   <div class="dropdown" id="loginMenu">
     <button class="dropbtn" id="loginToggle">Login ▾</button>
     <div class="dropdown-content" id="loginDropdown">
