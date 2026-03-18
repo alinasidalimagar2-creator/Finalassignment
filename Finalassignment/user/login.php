@@ -1,4 +1,5 @@
 <?php
+session_start();
 /* Load admin portal DB config */
 $root = realpath(dirname(__DIR__)); // e.g., C:\xampp\htdocs\Finalassignment
 $configPath = $root . '/admin portal/config.php';
@@ -28,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Query from singular table `user` (backticked because "user" is reserved)
             $stmt = $pdo->prepare(
                 "SELECT `id`, `name`, `email`, `password`
-                 FROM `user`
+                 FROM `users`
                  WHERE LOWER(`email`) = LOWER(?)
                  LIMIT 1"
             );
@@ -48,8 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $error = 'Invalid email or password.';
             }
         } catch (PDOException $e) {
-            $error = 'Database error.';
-        }
+    echo "<pre>";
+    echo $e->getMessage();
+    echo "</pre>";
+    exit;
+}
     }
 }
 ?>
