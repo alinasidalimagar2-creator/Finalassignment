@@ -119,9 +119,10 @@ if ($programmeID) {
       <label for="email">Email Address</label>
       <input id="email" type="email" name="email" placeholder="you@example.com" required>
 
-      <button class="btn" type="submit">Submit</button>
+      <button class="btn" type="submit">Submit</button>      
     </form>
 
+    <a href="index.php" >Back to Programmes</a>
   </div>
 </body>
 </html>
