@@ -33,16 +33,17 @@ body {
 /* ================================
    NAVBAR
 ================================ */
-nav {
+.main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(42, 31, 194, 0.25);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(61, 38, 155, 0.16);
 }
 
 nav .logo {
@@ -51,7 +52,35 @@ nav .logo {
   letter-spacing: 1px;
   color: var(--text);
 }
+nav .logo a {
+  color: #fff;
+  transition: color 0.2s ease;
+}
 
+nav .logo a:hover {
+  color: #7fdfff;
+}
+
+/* Navigation Links (Home, Programmes) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.nav-links li a {
+  color: #d7e1ff;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #fff;
+  background: rgba(52, 152, 219, 0.5);
+}
 /* ===============================
    LOGIN DROPDOWN – CLICK VERSION
 ================================*/
@@ -81,7 +110,6 @@ nav {
   color: #a8c0ff;
 }
 
-/* hidden by default */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -217,6 +245,15 @@ nav {
 @media (max-width: 768px) {
   nav {
     padding: 15px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links{
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
   }
   .filters {
     flex-direction: column;
