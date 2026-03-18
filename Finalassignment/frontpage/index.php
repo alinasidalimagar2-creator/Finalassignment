@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-/* Direct DB connection  */
 $host = "localhost";
 $user = "root";
 $pass = "";
