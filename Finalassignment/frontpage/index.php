@@ -6,15 +6,13 @@ $user = "root";
 $pass = "";
 $db   = "student_course_hub";
 
-header("Location: home.php");
-exit;
-
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
+
 
 /* Fetch all programmes with level names */
 try {
@@ -32,6 +30,7 @@ try {
     die('Query error: ' . htmlspecialchars($e->getMessage()));
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +42,7 @@ try {
 
 <nav class="main-nav">
   <div class="logo">
-  <a href="home.php">Home</a>
+  <a href="/Finalassignment/home/home.php">Home</a>
 </div>
 
   <div class="dropdown" id="loginMenu">
