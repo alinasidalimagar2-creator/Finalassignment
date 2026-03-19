@@ -11,7 +11,7 @@ if (!$id || !is_numeric($id)) {
 }
 
 // Fetch user
-$stmt = $pdo->prepare("SELECT `id`, `name`, `email` FROM `user` WHERE `id` = ?");
+$stmt = $pdo->prepare("SELECT `id`, `name`, `email` FROM `users` WHERE `id` = ?");
 $stmt->execute([$id]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -21,7 +21,7 @@ if (!$user) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        $del = $pdo->prepare("DELETE FROM `user` WHERE `id` = ?");
+        $del = $pdo->prepare("DELETE FROM `users` WHERE `id` = ?");
         $del->execute([$id]);
         $successMessage = "User deleted successfully!";
     } catch (PDOException $e) {
