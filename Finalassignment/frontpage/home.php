@@ -426,7 +426,7 @@ unset($_SESSION['flash_success'], $_SESSION['flash_error']);
         
         <nav>
             <ul>
-                <li><a href="home.php" >Home</a></li>
+                <li><a href="home.php" class="active">Home</a></li>
                 <li><a href="index.php">Programmes</a></li>
                 <li><a href="/Finalassignment/user/login.php">User Login</a></li>
                 <li><a href="/Finalassignment/user/signup.php">Sign Up</a></li>
@@ -499,7 +499,6 @@ unset($_SESSION['flash_success'], $_SESSION['flash_error']);
         <section class="cta">
             <h2>Ready to Start Your Journey?</h2>
             <p>Register your interest today and receive updates about open days, application deadlines, and more.</p>
-             <a href="/Finalassignment/frontpage/index.php" class="btn btn-success"> browse programme </a> 
         </section>
     </main>
 
