@@ -321,7 +321,7 @@ try {
     
     <!-- Header -->
     <div class="dashboard-header">
-        <h1>👨‍🏫 Staff Dashboard</h1>
+        <h1> Staff Dashboard</h1>
         <p>Welcome, <?= htmlspecialchars($_SESSION['staff_name']) ?> 
         <a href="staff_logout.php">🚪 Logout</a></p>
     </div>
@@ -414,8 +414,8 @@ try {
     
     <!-- Navigation -->
     <div class="nav-links">
-        <a href="../frontpage/home.php">🏠 Home</a>
-        <a href="staff_logout.php" class="logout">🚪 Logout</a>
+        <a href="../frontpage/home.php"> Home</a>
+        <a href="staff_logout.php" class="logout"> Logout</a>
     </div>
     
 </div>
